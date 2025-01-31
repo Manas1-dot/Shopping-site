@@ -42,7 +42,7 @@
 
   function openQuotePopup(productData) {
     const iframe = document.createElement("iframe");
-    iframe.src = "http://localhost:3001/"; // The iframe is running on port 3000
+    iframe.src = "https://assignment-puce-iota.vercel.app/"; // The iframe is running on port 3000
     iframe.style =
       "position: fixed; width: 1000px; height: 800px; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 1px solid #ccc; background: white; z-index: 1000;";
 
