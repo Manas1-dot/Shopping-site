@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Home.module.css";
 import ImageSection from "../ImageSection/ImageSection";
 import CommonButton from "../Button/CommontButton";
+import Counter from "../Counter/Counter";
 
 function Home() {
   const sizeData = ["XS", "S", "M", "L", "XL", "XXL"];
-  const [count, setCount] = useState(0);
+
   return (
     <div className={styles.homeBody}>
       <div className={styles.homeLeft}>
@@ -33,7 +34,9 @@ function Home() {
             <div className={styles.textColor}>Size</div>
             <div className={styles.sizeBody}>
               {sizeData.map((val, index) => (
-                <div key={index} className={styles.box1}>{val}</div>
+                <div key={index} className={styles.box1}>
+                  {val}
+                </div>
               ))}
             </div>
           </div>
@@ -46,27 +49,7 @@ function Home() {
 
           <div className={styles.textColor}>Quantity</div>
 
-          <div className={styles.countBody}>
-            <div className={styles.countTop}>
-              <div
-                onClick={() => {
-                  if (count > 0) {
-                    setCount((prev) => prev - 1);
-                  }
-                }}
-                className={styles.minusButon}
-              >
-                -
-              </div>
-              <div>{count}</div>
-              <div
-                className={styles.minusButon}
-                onClick={() => setCount((prev) => prev + 1)}
-              >
-                +
-              </div>
-            </div>
-          </div>
+          <Counter />
 
           <CommonButton text="Add to Cart" />
         </div>

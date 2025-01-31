@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './CommonButton.module.css'
 
-function CartButton({text=""}) {
+function CommonButton({text=""}) {
   return (
     <div className={styles.textHeading}>
         <div className={styles.textColor}>{text}</div>
@@ -9,4 +9,4 @@ function CartButton({text=""}) {
   )
 }
 
-export default CartButton
+export default CommonButton

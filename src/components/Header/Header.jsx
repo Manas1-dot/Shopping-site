@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
 
-function header() {
+function Header() {
   const data = ["Ecommerce", "Shop", "Stories", "About"];
   return (
     <div className={styles.header} >
@@ -18,4 +18,4 @@ function header() {
   );
 }
 
-export default header;
+export default Header;

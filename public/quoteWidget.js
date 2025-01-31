@@ -1,8 +1,6 @@
 (function () {
   function injectButton() {
-    // Use MutationObserver to watch for changes in the DOM
-    //   const observer = new MutationObserver(() => {
-    const container = document.getElementById("product-page"); // Adjust this selector based on your page structure
+    const container = document.getElementById("product-page");
 
     if (container) {
       createButton(container);
@@ -29,22 +27,22 @@
         price: document.querySelector(".product-price")?.innerText || "$99",
       };
 
-      // Save to localStorage (instead of cookies)
+      // Save to sessionStorage
       const quotes = JSON.parse(sessionStorage.getItem("quotes")) || [];
       quotes.push(productData);
       sessionStorage.setItem("quotes", JSON.stringify(quotes));
 
       // Open iframe popup
-      openQuotePopup();
+      openQuotePopup(productData);
     });
 
     // Append button to the container
     container.appendChild(button);
   }
 
-  function openQuotePopup() {
+  function openQuotePopup(productData) {
     const iframe = document.createElement("iframe");
-    iframe.src = "https://assignment-puce-iota.vercel.app/"; // Replace with actual URL
+    iframe.src = "http://localhost:3001/"; // The iframe is running on port 3000
     iframe.style =
       "position: fixed; width: 1000px; height: 800px; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 1px solid #ccc; background: white; z-index: 1000;";
 
