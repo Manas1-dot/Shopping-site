@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.headerLeft {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.headerRight {
+  width: 50%;
+}
+
+.innerText {
+  font-size: 20px;
+}

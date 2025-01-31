@@ -1,0 +1,14 @@
+.imageHead {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-left: 100px;
+}
+
+.imageInner {
+  min-width: 40%;
+  background-color: gray;
+  height: 200px;
+  display: flex;
+  gap: 20px;
+}
